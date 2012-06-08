@@ -64,17 +64,17 @@ PageRank~\cite{page1999} is an eigenvector centrality measure. It tries to captu
 \end{equation}
 where, $\alpha$ is the damping factor, $N$ is the total number of nodes, $\mathcal{N}_A = \{i : i\ \text{is a neighbor of A} \}$, $d_{out}$ is the out-degree of node $i$. From the equation~\ref{eqnPageRank} we see that PageRank weighs each in-coming edge by the fraction of the rank of the source node.
 
-In our study, we use $\alpha = 0.85$ which is the typical value of damping factor used in most PageRank computations. Also we set our error tolerance limit to $10^{-5}$ to compute the PageRank numerically using iGraph~\cite{iGraph2006}. We added the PageRank of individual papers to obtain productivity of professor and regressed it against base salary. Table~\ref{tablePageRank} gives the output of this regression, and we see that the p-value is too high to reject null hypothesis.
+In our study, we use $\alpha = 0.85$ which is the typical value of damping factor used in most PageRank computations. Also we set our error tolerance limit to $10^{-5}$ to compute the PageRank numerically using iGraph~\cite{iGraph2006}. We regressed the total PageRank of a professor's papers against base salary. Table~\ref{tablePageRank} gives the output of this regression, and we see that the p-value is too high to reject null hypothesis.
 
 \begin{table}[h]
 	\centering
 	\label{tablePageRank}
-	\caption{Results of linear regression with PageRank}
+	\caption{Results of linear regression with $\Sigma(PageRank)$}
 	\begin{tabular} {|l|c|c|}\hline
 		$R^2 \approx 0.562$  & \text{estimate} &  \text{$p$-value} \\ \hline
 		\text{constant} & $61447.5$ & $1.39\cdot10^{-9}$\\ \hline
 		\text{years since Ph.D.} & $2420.96$ & $3.03\cdot10^{-9}$ \\ \hline
-		\text{PageRank} & $1.1362\cdot10^{6}$ & $0.1945$\\ \hline
+		\text{$\Sigma(PageRank)$} & $1.1362\cdot10^{6}$ & $0.1945$\\ \hline
 	\end{tabular}
 \end{table}
 
