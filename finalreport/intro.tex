@@ -12,11 +12,27 @@ However, citation counts are imperfect measures, for various reasons. The $h$-in
 
 Furthermore, it is better to be cited by an important author than by a minor author. In consequence, Bollen et al.~\cite{bollen2006} argued that journal impact factors should incorporate centrality measurements like PageRank, which gives greater weight to citations from more important papers. PageRank is an eigenvector measure of centrality, thereby avoiding the problem of recursion in determining which citations are most important based on the importance of other citations. One contribution of our paper is to test the effect on pay of alternative productivity measures such as the $h$- and $g$-indices and more sophisticated measures of centrality like PageRank.
 
-\subsection{Structural summary of new stuff@@@@@@@}
+\subsection{Structural summary of productivity measures}
 In this paper, we use a scholarly citation network and salary data from ten public universities to test whether academic faculty compensation increases with research productivity, which is considered to reflect both quantity and quality of output. Of course, research is not the sole determinant of faculty pay. Universities also reward faculty for teaching and administrative activities. Furthermore, pay may depend upon seniority, and upon geographical location (due to differing costs of living). Nevertheless, since research is an important output of faculty at research universities, we expect research performance to affect pay.
 
-@@@@@@This duplicates something elsewhere//////
-To construct a scholar’s score for a particular \emph{centrality} measure and \emph{aggregator} measure, we first construct a citation network for papers, and compute the centrality of each paper in the network. We then aggregate across a scholar’s papers to compute a centrality-based measure of the scholar’s productivity. We include traditional measures of scholarly output such as citation count and h-index as special cases. 
+To construct a scholar’s score for a particular \textbf{centrality} measure and \textbf{aggregator} measure, we first construct a citation network for papers, and compute the \emph{centrality} of each paper in the network. We then \emph{aggregate} across a scholar’s papers to compute a centrality-based measure of the scholar’s productivity. We include traditional measures of scholarly output such as citation count and the $h$-index as special cases. Examples of centrality measures, aggregators, and productivity measures (combinations of the two) are shown in Table~\ref{tableTerminology}
+
+\begin{table}[h]
+	\centering
+	\label{tableTerminology}
+	\caption{Terminology: \emph{centrality measures} and \emph{aggregators}}
+	
+	\begin{tabular} {p{2.5cm}|p{2.5cm}||p{2cm}}
+		\textbf{centrality measures}& \textbf{aggregators} & scholars' \textbf{productivity} measures \\
+		 \textit{\footnotesize measure importance of a paper in the citation graph} &
+		 \textit{\footnotesize combine the centralities of several papers into a single score measuring a scholar's research output}
+		 & \\ \hline
+		citation count & total ($\Sigma$) & $\Sigma(citations)$ \\
+		betweenness & $g$-index & $g(citations)$ \\
+		closeness & $h$-index & $h(citations)$ \\
+		PageRank &  & $\Sigma(PageRank)$
+	\end{tabular}
+\end{table}
 
 To address statistical issues, we estimate the relationship between changes in salary and changes in different productivity measures. We also control for other determinants of compensation, such as seniority. We hope this study will inspire consideration of alternative measures of productivity, and help scholars better understand how their pay is determined in the job market.
 
